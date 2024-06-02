@@ -1,0 +1,14 @@
+{
+    "animals": [
+        "Dog", "Cat", "Horse", "Elephant", "Lion", "Tiger", "Giraffe", "Zebra", "Monkey", "Kangaroo", "Bear", "Panda", "Penguin", "Dolphin", "Whale", "Shark", "Octopus", "Crocodile", "Snake", "Eagle", "Owl", "Frog", "Turtle", "Gorilla", "Sloth", "Leopard", "Cheetah", "Wolf", "Fox", "Deer", "Rabbit", "Mouse", "Bat", "Seal", "Hippo", "Rhino", "Buffalo", "Gazelle", "Camel", "Llama", "Alpaca", "Goat", "Sheep", "Cow", "Pig", "Chicken", "Duck", "Turkey", "Goose", "Swan"
+    ],
+    "birds": [
+        "Sparrow", "Robin", "Blue Jay", "Cardinal", "Crow", "Pigeon", "Dove", "Hummingbird", "Finch", "Blackbird", "Woodpecker", "Owl", "Eagle", "Hawk", "Falcon", "Seagull", "Pelican", "Albatross", "Swan", "Goose", "Duck", "Heron", "Stork", "Crane", "Flamingo", "Penguin", "Parrot", "Toucan", "Cockatoo", "Canary", "Kingfisher", "Magpie", "Starling", "Swift", "Vulture", "Kookaburra", "Ostrich", "Emu", "Cassowary", "Kiwi", "Puffin", "Tern", "Spoonbill", "Quail", "Grouse", "Pheasant", "Cuckoo", "Roadrunner", "Wren", "Osprey"
+    ],
+    "fruits": [
+        "Apple", "Banana", "Orange", "Grape", "Watermelon", "Strawberry", "Pineapple", "Mango", "Blueberry", "Peach", "Cherry", "Pear", "Plum", "Kiwi", "Raspberry", "Cantaloupe", "Apricot", "Lemon", "Lime", "Cranberry", "Pomegranate", "Coconut", "Fig", "Guava", "Passionfruit", "Papaya", "Dragonfruit", "Lychee", "Tangerine", "Blackberry", "Avocado", "Grapefruit", "Nectarine", "Persimmon", "Melon", "Honeydew", "Starfruit", "Mulberry", "Kumquat", "Date", "Jackfruit", "Clementine", "Boysenberry", "Elderberry", "Feijoa", "Rambutan", "Tamarind", "Currant", "Quince", "Loquat"
+    ],
+    "sports": [
+        "Football", "Basketball", "Tennis", "Volleyball", "Baseball", "Rugby", "Cricket", "Golf", "Swimming", "Athletics", "Tennis", "Badminton", "Hockey", "Hockey", "Cycling", "Boxing", "Wrestling", "MMA", "Gymnastics", "Fencing", "Archery", "Skiing", "Snowboarding", "Surfing", "Rowing", "Sailing", "Canoeing", "Kayaking", "Triathlon", "Diving", "Bobsleigh", "Skeleton", "Luge", "Judo", "Taekwondo", "Karate", "Weightlifting", "Powerlifting", "Handball", "Squash", "Racquetball", "Polo", "Lacrosse", "Snooker", "Pool", "Racing", "Equestrianism", "Football", "Skydiving", "Soccer"
+    ]
+}

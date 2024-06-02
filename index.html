@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
+        <title>Hangman Game</title>
+    </head>
+    <body>
+        <header>
+            <div class="scores">
+                <p>Highest Score: _</p>
+                <p>Score: _</p>
+                <p>Lives: 5</p>
+            </div>
+            <div class="choose">
+                <div class="row">
+                    <div class="category animals"><p>Animals</p></div>
+                    <div class="category birds"><p>Birds</p></div>
+                </div>
+                <div class="row">
+                    <div class="category fruits">Fruits</div>
+                    <div class="category sports">Sports</div>
+                </div>
+                <div class="category restartButton">Restart</div>
+            </div>
+        </header>
+        <main>
+            <div class="guess">
+                <p>Guess the word...</p>
+                <p id="underscores">_ _ _ _ _</p>
+                <div class="alphabet">
+                    <div class="alphabetRow">
+                        <div>Q</div>
+                        <div>W</div>
+                        <div>E</div>
+                        <div>R</div>
+                        <div>T</div>
+                        <div>Y</div>
+                        <div>U</div>
+                        <div>I</div>
+                        <div>O</div>
+                        <div>P</div>
+                    </div>
+                    <div class="alphabetRow">
+                        <div>A</div>
+                        <div>S</div>
+                        <div>D</div>
+                        <div>F</div>
+                        <div>G</div>
+                        <div>H</div>
+                        <div>J</div>
+                        <div>K</div>
+                        <div>L</div>
+                    </div>
+                    <div class="alphabetRow">
+                        <div>Z</div>
+                        <div>X</div>
+                        <div>C</div>
+                        <div>V</div>
+                        <div>B</div>
+                        <div>N</div>
+                        <div>M</div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+        <script type="module" src="script.js"></script>
+
+    </body>
+</html>
