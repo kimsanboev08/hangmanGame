@@ -38,41 +38,66 @@ const letterDivs = document.querySelectorAll('.alphabetRow > div');
 let word = '';
 let newUnderScores = '';
 let lives = 5;
+let categoryChoice = 0;
+let score = Number(document.getElementById('score').textContent);
 
 
 function getUnderscores() {
     newUnderScores = document.getElementById('underscores').textContent = ('_ '.repeat(word.length)).trim();
 }
 
+function updateScore(score) {
+    let highScore = Number(document.getElementById('highScore').textContent);
+    document.getElementById('score').textContent = score;
+    if (score >= highScore) {
+        document.getElementById('highScore').textContent = score;
+    }
+}
+    
+
+function restage() {
+    getUnderscores();
+    letterDivs.forEach(div => {
+        div.style.backgroundColor = 'white';
+        div.style.cursor = 'pointer';
+        div.style.pointerEvents = 'auto';
+    });
+}
+
+function chooseWord(choice) {
+    const rndInt = Math.floor(Math.random() * 50);
+    switch (choice) {
+        case 0:
+            word = animals[rndInt].toUpperCase();
+            break;
+        case 1:
+            word = birds[rndInt].toUpperCase();;
+            break;
+        case 2:
+            word = fruits[rndInt].toUpperCase();
+            break;
+        case 3:
+            word = sports[rndInt].toUpperCase();
+            break;
+        default:
+            break;
+    }
+}
+
+function updateLives(num) {
+    document.getElementById('lives').textContent = `Lives: ${num}`;
+}
+
 for (let i = 0; i < 4; i++) {
     categoryElements[i].addEventListener('click', function() {
-        const rndInt = Math.floor(Math.random() * 50);
         for (let j = 0; j < 4; j++) {
             if (j === i) continue;
             categoryElements[j].style.backgroundColor = 'rgb(159, 155, 155)';
             categoryElements[j].style.pointerEvents = 'none';
         }
-        switch (i) {
-            case 0:
-                word = animals[rndInt].toUpperCase();
-                break;
-            case 1:
-                word = birds[rndInt].toUpperCase();;
-                break;
-            case 2:
-                word = fruits[rndInt].toUpperCase();
-                break;
-            case 3:
-                word = sports[rndInt].toUpperCase();
-                break;
-            default:
-                break;
-        }
-        getUnderscores();
-        letterDivs.forEach(div => {
-            div.style.backgroundColor = 'white';
-            div.style.cursor = 'pointer';
-        });
+        categoryChoice = i;
+        chooseWord(categoryChoice);
+        restage();
         console.log(word);
     });
 }
@@ -88,6 +113,7 @@ restart.addEventListener('click', function() {
         div.style.cursor = 'none';
     });
     document.getElementById('underscores').textContent = '_ _ _ _ _';
+    updateScore(0);
 });
 
 
@@ -107,7 +133,29 @@ letterDivs.forEach(div => {
             div.style.backgroundColor = 'green';
         } else {
             div.style.backgroundColor = 'red';
+            lives--;
+            updateLives(lives);
         }
         document.getElementById('underscores').textContent = newUnderScores.trim();
+
+        // Lost
+        if (lives === 0) {
+            // You Lose
+            // Pop up
+
+        }
+
+        // Guessed the Entire Word
+        if (!newUnderScores.includes('_')) {
+            lives = 5;
+            updateLives(lives);
+            chooseWord(categoryChoice);
+            restage();
+            score++
+            updateScore(score);
+            console.log(word);
+        }
     });
 });
+
+
