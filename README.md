@@ -15,7 +15,7 @@ A fun and interactive word guessing game where players choose a category and gue
 
 **Getting Started**
 1. Clone the repository:
-*git clone https://github.com/yourusername/word-guessing-game.git*
+*git clone https://github.com/kimsanboev08/hangmanGame.git*
 
 2. Navigate to the project directory:
 *cd word-guessing-game*
