@@ -91,9 +91,13 @@ function updateLives(num) {
 for (let i = 0; i < 4; i++) {
     categoryElements[i].addEventListener('click', function() {
         for (let j = 0; j < 4; j++) {
-            if (j === i) continue;
-            categoryElements[j].style.backgroundColor = 'rgb(159, 155, 155)';
-            categoryElements[j].style.pointerEvents = 'none';
+            if (j === i) {
+                categoryElements[j].style.pointerEvents = 'none';
+            } else {
+                categoryElements[j].style.backgroundColor = 'rgb(159, 155, 155)';
+                categoryElements[j].style.pointerEvents = 'none';
+            }
+            
         }
         categoryChoice = i;
         chooseWord(categoryChoice);
