@@ -113,7 +113,8 @@ restart.addEventListener('click', function() {
         div.style.cursor = 'none';
     });
     document.getElementById('underscores').textContent = '_ _ _ _ _';
-    updateScore(0);
+    score = 0;
+    updateScore(score);
 });
 
 
