@@ -15,18 +15,18 @@ A fun and interactive word guessing game where players choose a category and gue
 
 **Getting Started**
 1. Clone the repository:
-git clone https://github.com/yourusername/word-guessing-game.git
+*git clone https://github.com/yourusername/word-guessing-game.git*
 
 2. Navigate to the project directory:
-cd word-guessing-game
+*cd word-guessing-game*
 
 3. Install node.js https://nodejs.org/en (if not already installed):
 
 4. Install npm live server:
-npm install -g live-server
+*npm install -g live-server*
 
-5.Start the live server:
-live-server
+5. Start the live server:
+*live-server*
 
 Open http://127.0.0.1:8080 in your browser to start playing the game.
 
