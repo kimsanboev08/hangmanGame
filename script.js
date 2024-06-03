@@ -64,7 +64,6 @@ for (let i = 0; i < 4; i++) {
                 word = sports[rndInt];
                 break;
             default:
-                // restart
                 break;
         }
         getUnderscores();
@@ -76,18 +75,21 @@ for (let i = 0; i < 4; i++) {
     });
 }
 
+restart.addEventListener('click', function() {
+    for (let j = 0; j < 4; j++) {
+        categoryElements[j].style.backgroundColor = 'white';
+        categoryElements[j].style.cursor = 'pointer';
+        categoryElements[j].style.pointerEvents = 'auto';
+    }
+    letterDivs.forEach(div => {
+        div.style.backgroundColor = 'rgb(159, 155, 155)';
+        div.style.cursor = 'none';
+    });
+    document.getElementById('underscores').textContent = '_ _ _ _ _';
+});
+
 
 // Start Guessing
 letterDivs.forEach(div => {
     // some function
 });
-
-
-/*
-restart.addEventListener('click', function() {
-    // restart
-    console.log(word);
-});
-*/
-
-
