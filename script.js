@@ -36,10 +36,12 @@ const categoryElements = document.getElementsByClassName('category');
 const restart = document.getElementsByClassName('restartButton')[0];
 const letterDivs = document.querySelectorAll('.alphabetRow > div');
 let word = '';
+let newUnderScores = '';
+let lives = 5;
 
 
 function getUnderscores() {
-    document.getElementById('underscores').textContent = ('_ '.repeat(word.length)).trim();
+    newUnderScores = document.getElementById('underscores').textContent = ('_ '.repeat(word.length)).trim();
 }
 
 for (let i = 0; i < 4; i++) {
@@ -52,16 +54,16 @@ for (let i = 0; i < 4; i++) {
         }
         switch (i) {
             case 0:
-                word = animals[rndInt];
+                word = animals[rndInt].toUpperCase();
                 break;
             case 1:
-                word = birds[rndInt];
+                word = birds[rndInt].toUpperCase();;
                 break;
             case 2:
-                word = fruits[rndInt];
+                word = fruits[rndInt].toUpperCase();
                 break;
             case 3:
-                word = sports[rndInt];
+                word = sports[rndInt].toUpperCase();
                 break;
             default:
                 break;
@@ -91,5 +93,21 @@ restart.addEventListener('click', function() {
 
 // Start Guessing
 letterDivs.forEach(div => {
-    // some function
+    div.addEventListener('click', function() {
+        let match = false;
+        for (let i = 0; i < word.length; i++) {
+            let letter = word.charAt(i);
+            if (letter === div.textContent) {
+                newUnderScores = newUnderScores.substring(0, i*2) + letter + newUnderScores.substring(i*2 + 1, newUnderScores.length);
+                match = true;  
+            }
+            div.style.pointerEvents = 'none';
+        }
+        if (match) {
+            div.style.backgroundColor = 'green';
+        } else {
+            div.style.backgroundColor = 'red';
+        }
+        document.getElementById('underscores').textContent = newUnderScores.trim();
+    });
 });
