@@ -1,6 +1,6 @@
 # hangmanGame
 **Overview**
-A fun and interactive word guessing game where players choose a category and guess the word letter by letter. 
+- A fun and interactive word guessing game where players choose a category and guess the word letter by letter. 
 
 **Game Rules**
 - Select a category to start the game.
