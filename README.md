@@ -3,6 +3,7 @@
 
 A fun and interactive word guessing game where players choose a category and guess the word letter by letter. 
 
+
 **Game Rules**
 - Select a category to start the game.
 - A word from the selected category will be chosen randomly.
