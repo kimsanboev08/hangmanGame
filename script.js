@@ -119,6 +119,8 @@ restart.addEventListener('click', function() {
     document.getElementById('underscores').textContent = '_ _ _ _ _';
     score = 0;
     updateScore(score);
+    lives = 5;
+    updateLives(lives);
 });
 
 
@@ -163,4 +165,4 @@ letterDivs.forEach(div => {
     });
 });
 
-
+// Lives go to negative, add losing
