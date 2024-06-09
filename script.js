@@ -40,6 +40,8 @@ let newUnderScores = '';
 let lives = 5;
 let categoryChoice = 0;
 let score = Number(document.getElementById('score').textContent);
+let overlay = document.querySelector('.overlay');
+let popUp = document.querySelector('.pop-up');
 
 
 function getUnderscores() {
@@ -103,8 +105,8 @@ let restartFunction = function() {
     updateScore(score);
     lives = 5;
     updateLives(lives);
-    document.querySelector('.pop-up').classList.add('hidden');
-    document.querySelector('.overlay').classList.add('hidden');
+    popUp.classList.add('hidden');
+    overlay.classList.add('hidden');
 }
 
 for (let i = 0; i < 4; i++) {
@@ -167,5 +169,12 @@ letterDivs.forEach(div => {
     });
 });
 
-document.querySelector('.overlay').addEventListener('click', restartFunction);
+overlay.addEventListener('click', restartFunction);
 document.querySelector('.exit-button').addEventListener('click', restartFunction);
+
+// Esc Button
+document.addEventListener('keydown', function(e) {
+    if(e.key === 'Escape' && !overlay.classList.contains('hidden')) {
+        restartFunction();
+    }
+});
