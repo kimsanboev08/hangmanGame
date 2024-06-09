@@ -34,3 +34,5 @@ Open http://127.0.0.1:8080 in your browser to start playing the game.
 ![image](https://github.com/kimsanboev08/hangmanGame/assets/51867935/8ccc3a0f-435d-4405-9095-6c2dd75a73ec)
 ![image](https://github.com/kimsanboev08/hangmanGame/assets/51867935/a8769677-ed4d-45c2-a6d1-dac127b3699e)
 ![image](https://github.com/kimsanboev08/hangmanGame/assets/51867935/ae98ed98-603d-422c-b7af-24ce46ac6c05)
+![image](https://github.com/kimsanboev08/hangmanGame/assets/51867935/11f4dabe-85ea-4c90-a5ba-b7fef01dfef0)
+
