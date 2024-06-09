@@ -79,3 +79,69 @@ header {
     height: 50px;
     pointer-events: 'none';
 }
+
+.pop-up {
+    background-color: white;
+    width: 600px;
+    height: 400px;
+    position: absolute;
+    left: calc(50% - 300px);
+    top: calc(50% - 200px);
+    display: flex;
+    justify-content: center;
+}
+
+.pop-up p {
+    text-align: center;
+    color: black;
+    margin: auto 0;
+}
+
+.exit-button {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: none;
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background: none;
+    margin-left: 560px;
+    cursor: pointer;
+}
+
+.exit-button::before, 
+.exit-button::after {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: black;
+    display: block;
+}
+
+.exit-button::before {
+    transform: rotate(45deg);
+}
+
+.exit-button::after {
+    transform: rotate(-45deg);
+}
+
+.overlay {
+    position: absolute;
+    backdrop-filter: blur(10px);
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-size: cover;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}

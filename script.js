@@ -88,6 +88,25 @@ function updateLives(num) {
     document.getElementById('lives').textContent = `Lives: ${num}`;
 }
 
+let restartFunction = function() {
+    for (let j = 0; j < 4; j++) {
+        categoryElements[j].style.backgroundColor = 'white';
+        categoryElements[j].style.cursor = 'pointer';
+        categoryElements[j].style.pointerEvents = 'auto';
+    }
+    letterDivs.forEach(div => {
+        div.style.backgroundColor = 'rgb(159, 155, 155)';
+        div.style.cursor = 'none';
+    });
+    document.getElementById('underscores').textContent = '_ _ _ _ _';
+    score = 0;
+    updateScore(score);
+    lives = 5;
+    updateLives(lives);
+    document.querySelector('.pop-up').classList.add('hidden');
+    document.querySelector('.overlay').classList.add('hidden');
+}
+
 for (let i = 0; i < 4; i++) {
     categoryElements[i].addEventListener('click', function() {
         for (let j = 0; j < 4; j++) {
@@ -106,23 +125,7 @@ for (let i = 0; i < 4; i++) {
     });
 }
 
-restart.addEventListener('click', function() {
-    for (let j = 0; j < 4; j++) {
-        categoryElements[j].style.backgroundColor = 'white';
-        categoryElements[j].style.cursor = 'pointer';
-        categoryElements[j].style.pointerEvents = 'auto';
-    }
-    letterDivs.forEach(div => {
-        div.style.backgroundColor = 'rgb(159, 155, 155)';
-        div.style.cursor = 'none';
-    });
-    document.getElementById('underscores').textContent = '_ _ _ _ _';
-    score = 0;
-    updateScore(score);
-    lives = 5;
-    updateLives(lives);
-});
-
+restart.addEventListener('click', restartFunction);
 
 // Start Guessing
 letterDivs.forEach(div => {
@@ -147,9 +150,8 @@ letterDivs.forEach(div => {
 
         // Lost
         if (lives === 0) {
-            // You Lose
-            // Pop up
-
+            document.querySelector('.pop-up').classList.remove('hidden');
+            document.querySelector('.overlay').classList.remove('hidden');
         }
 
         // Guessed the Entire Word
@@ -165,4 +167,5 @@ letterDivs.forEach(div => {
     });
 });
 
-// Lives go to negative, add losing
+document.querySelector('.overlay').addEventListener('click', restartFunction);
+document.querySelector('.exit-button').addEventListener('click', restartFunction);
